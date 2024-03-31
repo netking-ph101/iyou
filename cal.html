@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="author" content="IYOU♥愛遊">
+  <link rel="stylesheet" href="/assets/css/iyou.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script src="/assets/js/3f950a1575.js" crossorigin="anonymous"></script>
+  
+  <meta name="description"
+    content="報價單|出發日期|回程日期|布袋船-成人|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|船票-半票|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|船票-未滿3歲|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|雙人房|0|1|2|3|4|四人房|0|1|2|3|4|加床|0|1|2|3|4|5|6|機車數|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|飛機起飛地點|台北|台中|嘉義|台南|高雄|飛機-成人票|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|飛機-敬老票|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|飛機-兒童票|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|汽車種類|TOYOTA|VIOS/YARIS|1.5|TOYOTA|NEWVIOS|1.5|NISSAN|TIIDA|1.6|TOYOTA|ALTIS|1.8|三菱|OUTLANDER|2.4CC|現代九人座SIAREX2.5CC|汽車數|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|汽車種類|TOYOTA|VIOS/YARIS|1.5|TOYOTA|NEWVIOS|1.5|NISSAN|TIIDA|1.6|TOYOTA|ALTIS|1.8|三菱|OUTLANDER|2.4CC|現代九人座SIAREX2.5CC|汽車數|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|價格計算 ">
+  <title>全報價單</title>
+  <meta property="og:title" content="IYOU♥愛遊-全報價單">
+  <meta property="og:description"
+    content="報價單                            出發日期                                        回程日期                                        布袋船-成人                            {% f... ">
+  
+   
+    
+    
+    
+      
+    
+      
+        
+        
+
+    <meta property="og:image"
+    content="https://www.iyou.tw/assets/images/logo.webp">
+  
+
+  <link rel="icon" href="/assets/images/favicon.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="/assets/images/apple-logo.webp">
+
+
+  <meta property="og:url" content="https://www.iyou.tw/cal.html">
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta name="robots" content="noindex, nofollow">
+  
+
+
+  
+  <script src="/assets/js/JsBarcodeall.min.js"></script>
+  
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P79D6KZK');</script>
+  <!-- End Google Tag Manager -->
+
+
+
+
+</head>
+
+<body>
+
+  <main class="main pt-4">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8 mx-auto p-4 py-md-2 ">
+
+    <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
+        <img id="first-image" src="/assets/images/logo.webp" alt="logo圖" width="175" height="50" onclick="toggleImage()" />
+        <img id="second-image" src="/assets/images/idlefish-logo.png" alt="logo圖" width="212" height="50" onclick="toggleImage()" style="display: none;" />
+        <img id="third-image" src="/assets/images/515-logo.png" alt="logo圖" width="212" height="50" onclick="toggleImage()" style="display: none;" />
+        <span class="fs-3 mx-auto">報價單</span>
+    </header>
+    <div class="row">
+        <div class="col-6">
+            <label class="pt-2">出發日期</label>
+            <input type="date" class=" form-control text-start" id="startDate" onchange="updateMinEndDate()" />
+        </div>
+        <div class="col-6">
+            <label class="pt-2">回程日期</label>
+            <input type="date" class=" form-control text-start" id="endDate" onchange="calculatePrice()" />
+        </div>
+        <div class="col-4">
+            <label class="pt-2">布袋船-成人</label>
+            <select class="form-select" id="adults1">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+        <div class="col-4">
+            <label class="pt-2">船票-半票</label>
+            <select class="form-select" id="seniors1">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+        <div class="col-4">
+            <label class="pt-2">船票-未滿3歲</label>
+            <select class="form-select" id="children1">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-4">
+            <label class="pt-2">雙人房</label>
+            <select class="form-select" id="q2">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+            </select>
+        </div>
+
+        <div class="col-4">
+            <label class="pt-2">四人房</label>
+            <select class="form-select" id="q4">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+            </select>
+        </div>
+
+        <div class="col-4">
+            <label class="pt-2">加床</label>
+            <select class="form-select" id="q0">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+            </select>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <label class="pt-2">機車數</label>
+            <select class="form-select" id="moto_number">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label class="pt-2">飛機起飛地點</label>
+            <select class="form-select" id="location">
+                <option value="Taipei">台北</option>
+                <option value="Taichung">台中</option>
+                <option value="Chiayi">嘉義</option>
+                <option value="Tainan">台南</option>
+                <option value="Kaohsiung">高雄</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label class="pt-2">飛機-成人票</label>
+            <select class="form-select" id="adults">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+        <div class="col-6">
+            <label class="pt-2">飛機-敬老票</label>
+            <select class="form-select" id="seniors">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+        <div class="col-6">
+            <label class="pt-2">飛機-兒童票</label>
+            <select class="form-select" id="children">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-12">
+            <label class="pt-2">汽車種類</label>
+            <select class="form-select" id="carType">
+                <option value="vios">TOYOTA VIOS/YARIS 1.5</option>
+                <option value="newvios">TOYOTA NEWVIOS 1.5</option>
+                <option value="tiida">NISSAN TIIDA 1.6</option>
+                <option value="altis">TOYOTA ALTIS 1.8</option>
+                <option value="outlander">三菱 OUTLANDER 2.4CC</option>
+                <option value="siarex">現代九人座SIAREX2.5CC</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label class="pt-2">汽車數</label>
+            <select class="form-select" id="quantity">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <label class="pt-2">汽車種類</label>
+            <select class="form-select" id="carType1">
+                <option value="vios">TOYOTA VIOS/YARIS 1.5</option>
+                <option value="newvios">TOYOTA NEWVIOS 1.5</option>
+                <option value="tiida">NISSAN TIIDA 1.6</option>
+                <option value="altis">TOYOTA ALTIS 1.8</option>
+                <option value="outlander">三菱 OUTLANDER 2.4CC</option>
+                <option value="siarex">現代九人座SIAREX2.5CC</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label class="pt-2">汽車數</label>
+            <select class="form-select" id="quantity1">
+                
+                <option value="0">0</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+                <option value="11">11</option>
+                
+                <option value="12">12</option>
+                
+                <option value="13">13</option>
+                
+                <option value="14">14</option>
+                
+                <option value="15">15</option>
+                
+                <option value="16">16</option>
+                
+                <option value="17">17</option>
+                
+                <option value="18">18</option>
+                
+                <option value="19">19</option>
+                
+                <option value="20">20</option>
+                
+            </select>
+        </div>
+
+    </div>
+
+
+    <div class="pt-3">
+
+
+    </div>
+    <div class="d-grid gap-2 col-8 col-md-6 mx-auto">
+        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"> <span id="allDisplay" class="btn-text"></span> </button>
+    </div>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">價格計算</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p id="roomDisplay"></p>
+            <p id="priceDisplay"></p>
+            <p id="cost"></p>
+            <p id="dalta"></p>
+            <p id="carDisplay"></p>
+            <p id="carDisplay1"></p>
+            <p id="allDisplay1"></p>
+            <p id="aveDisplay1"></p>
+
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+
+
+    // 获取所有需要监听变动的输入框
+    const inputs = document.querySelectorAll(' #adults1, #seniors1, #children1,#moto_number,#carType,#quantity,#carType1,#quantity1,#q0,#q2,#q4,#location,#adults,#seniors,#children');
+
+    // 为每个输入框添加 change 事件监听器
+    inputs.forEach(input => {
+        input.addEventListener('change', calculatePrice);
+    });
+
+    function calculatePrice() {
+
+
+        const location = document.getElementById('location').value;
+        const adults = parseInt(document.getElementById('adults').value);
+        const seniors = parseInt(document.getElementById('seniors').value);
+        const children = parseInt(document.getElementById('children').value);
+
+        // 將城市與票價對應好
+        const ticketPrices = {
+            Taipei: { adult: 4800, senior: 2500, child: 3600 },
+            Taichung: { adult: 3700, senior: 1900, child: 2800 },
+            Chiayi: { adult: 3500, senior: 1800, child: 2650 },
+            Tainan: { adult: 3500, senior: 1900, child: 2700 },
+            Kaohsiung: { adult: 4100, senior: 2100, child: 3100 }
+        };
+
+        // 計算機票成本
+        const totalCost =
+            adults * ticketPrices[location].adult +
+            seniors * ticketPrices[location].senior +
+            children * ticketPrices[location].child;
+        if (totalCost === 0) {
+            cost.style.display = 'none';
+        } else {
+            cost.style.display = 'block';
+            cost.textContent = `機票成本： ${totalCost} = ${adults} * ${ticketPrices[location].adult} +
+            ${seniors} * ${ticketPrices[location].senior} +
+            ${children} * ${ticketPrices[location].child}`;
+        }
+        //計算船票成本
+
+        const startDateInput = document.getElementById('startDate');
+        const endDateInput = document.getElementById('endDate');
+        const priceDisplay = document.getElementById('priceDisplay');
+        const adults1 = parseInt(document.getElementById('adults1').value);
+        const seniors1 = parseInt(document.getElementById('seniors1').value);
+        const children1 = parseInt(document.getElementById('children1').value);
+        const moto_number = parseInt(document.getElementById('moto_number').value);
+
+
+        const startDate = new Date(startDateInput.value);
+        const endDate = new Date(endDateInput.value);
+
+        const startTimestamp = startDate.getTime();
+        const endTimestamp = endDate.getTime();
+
+        const today = new Date();
+        const todayTimestamp = today.getTime();
+
+        if (endTimestamp < startTimestamp) {
+            endDateInput.value = startDateInput.value;
+        }
+
+        const startDay = startDate.getDay();
+        const endDay = endDate.getDay();
+        let totalPrice = 1200;
+        let SwPrice = 0;
+        let SsPrice = 0;
+        let EwPrice = 0;
+        let EsPrice = 0;
+        if (startDay === 5 || startDay === 6) {
+            SwPrice = 150;
+        }
+
+        if (endDay === 0 || endDay === 1) {
+            EwPrice = 150;
+        }
+
+        const specialDates = [
+            [new Date('2024-04-04').getTime(), new Date('2024-04-07').getTime()],
+            [new Date('2024-06-08').getTime(), new Date('2024-06-10').getTime()]
+        ];
+
+        const isSpecialDate = specialDates.some(dateRange => {
+            return startTimestamp >= dateRange[0] && startTimestamp <= dateRange[1];
+        });
+
+        if (isSpecialDate) {
+            SsPrice = 250;
+        }
+
+        const isSpecialEndDate = specialDates.some(dateRange => {
+            return endTimestamp >= dateRange[0] && endTimestamp <= dateRange[1];
+        });
+
+        if (isSpecialEndDate) {
+            EsPrice = 250;
+        }
+        totalPrice = Math.max(SwPrice, SsPrice) + Math.max(EwPrice, EsPrice) + totalPrice;
+        boatcost = totalPrice * adults1 + 975 * seniors1 + 195 * children1
+        if (boatcost === 0) {
+            priceDisplay.style.display = 'none';
+        } else {
+            priceDisplay.style.display = 'block';
+            priceDisplay.textContent = `船票成本： ${boatcost} = ${totalPrice} * ${adults1} + 975 * ${seniors1} + 195 * ${children1}`;
+        }
+        // 計算機車成本
+        const q2 = parseInt(document.getElementById('q2').value);
+        const q4 = parseInt(document.getElementById('q4').value);
+        dal = (endTimestamp - startTimestamp) / (24 * 60 * 60 * 1000);
+        jc = q2+q4;
+        moto_cost = (dal * 250 + 150) * moto_number + 100 * jc;
+        if (moto_cost === 0) {
+            dalta.style.display = 'none';
+        } else {
+            dalta.style.display = 'block';
+            dalta.textContent = `機車成本： ${moto_cost} = (${dal} * 250 + 150) * ${moto_number} + 100 *${jc} `;
+        }
+        //計算汽車成本
+        const carType = document.getElementById('carType').value;
+        const quantity = parseInt(document.getElementById('quantity').value);
+
+        const prices = {
+            vios: 1200,
+            newvios: 1300,
+            tiida: 1400,
+            altis: 1500,
+            outlander: 2000,
+            siarex: 2500
+        };
+
+        const carPrice = prices[carType] * quantity * (dal + 1);
+        if (carPrice === 0) {
+            carDisplay.style.display = 'none';
+        } else {
+            carDisplay.style.display = 'block';
+            carDisplay.textContent = `汽車成本： ${carPrice} = ${prices[carType]} * ${quantity} * (${dal} + 1)`;
+        }
+        const carType1 = document.getElementById('carType1').value;
+        const quantity1 = parseInt(document.getElementById('quantity1').value);
+
+        const prices1 = {
+            vios: 1200,
+            newvios: 1300,
+            tiida: 1400,
+            altis: 1500,
+            outlander: 2000,
+            siarex: 2500
+        };
+
+        const carPrice1 = prices1[carType1] * quantity1 * (dal + 1);
+        if (carPrice1 === 0) {
+            carDisplay1.style.display = 'none';
+        } else {
+            carDisplay1.style.display = 'block';
+            carDisplay1.textContent = `汽車成本： ${carPrice1} = ${prices1[carType1]} * ${quantity1} * (${dal} + 1)`;
+        }
+        //計算房間成本
+        
+        const q0 = parseInt(document.getElementById('q0').value);
+        const roomPrice = (q2 * 2625 + q4 * 3900 + q0 * 500) * dal;
+        if (roomPrice === 0) {
+            roomDisplay.style.display = 'none';
+        } else {
+            roomDisplay.style.display = 'block';
+            roomDisplay.textContent = `房間成本： ${roomPrice} = ( ${q2} * 2625 + ${q4} * 3900 + ${q0} * 500 ) * ${dal}`;
+        }
+        // 總報價
+        allcost = totalCost + boatcost + moto_cost + carPrice + carPrice1 + roomPrice
+        avecost=allcost/(adults1+seniors1+adults+seniors+children);
+        allDisplay.textContent = `總價： ${allcost}`;
+        allDisplay1.textContent = `總價： ${allcost}`;
+        aveDisplay1.textContent = `人均： ${parseInt(avecost)}`;
+
+
+    }
+
+    function updateMinEndDate() {
+        const startDateInput = document.getElementById('startDate');
+        const endDateInput = document.getElementById('endDate');
+
+        endDateInput.min = startDateInput.value;
+        endDateInput.value = startDateInput.value; // 设置回程日期为出发日期
+
+        calculatePrice();
+    }
+
+    function updateMinReturnDate() {
+        const startDateInput = document.getElementById('startDate');
+        const endDateInput = document.getElementById('endDate');
+
+        const today = new Date();
+        const todayFormatted = formatDate(today);
+
+        startDateInput.min = todayFormatted;
+        startDateInput.value = todayFormatted;
+
+        endDateInput.min = todayFormatted;
+        endDateInput.value = todayFormatted; // 设置回程日期初始值为今天
+
+        calculatePrice();
+    }
+
+    function formatDate(date) {
+        const yyyy = date.getFullYear();
+        const mm = String(date.getMonth() + 1).padStart(2, '0');
+        const dd = String(date.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+    }
+
+    updateMinReturnDate();
+
+//換圖的程式
+function toggleImage() {
+    var firstImage = document.getElementById('first-image');
+    var secondImage = document.getElementById('second-image');
+    var thirdImage = document.getElementById('third-image');
+
+    if (firstImage.style.display !== 'none') {
+        firstImage.style.display = 'none';
+        secondImage.style.display = 'inline-block';
+        thirdImage.style.display = 'none'; 
+    } else if (secondImage.style.display !== 'none') {
+        firstImage.style.display = 'none';
+        secondImage.style.display = 'none';
+        thirdImage.style.display = 'inline-block'; 
+    } else {
+        firstImage.style.display = 'inline-block';
+        secondImage.style.display = 'none';
+        thirdImage.style.display = 'none'; 
+    }
+}
+
+
+
+</script>
+
+
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/assets/js/app.js"></script>
+
+
+
+<script src="/assets/js/jquery-2.2.4.min.js"></script>
+<script src="/assets/js/simpleCart.js"></script>
+<script async src="/assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

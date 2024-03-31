@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /cal.html
+Disallow: /calboat.html
+Disallow: /calfly.html
+Disallow: /table.html
+
+Sitemap: https://www.iyou.tw/sitemap.xml
